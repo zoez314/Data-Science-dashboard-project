@@ -1,0 +1,4 @@
+scikit-learn==1.3.2
+python-fasthtml==0.4.1
+fh-matplotlib==0.0.4
+./python-package/dist/employee_events-0.0.tar.gz

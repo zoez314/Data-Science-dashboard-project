@@ -53,3 +53,14 @@ Include all items used to build project.
 ## License
 
 [License](LICENSE.txt)
+
+# FastHtml User Dashboard
+
+### Run dashboard
+
+1. Navigate to the root of this project
+2. Run the following command in terminal
+
+```bash
+bash ./start.sh
+```

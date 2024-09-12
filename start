@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [ ! -d "./env" ]; then
+    python -m venv ./env
+    source ./env/bin/activate
+    pip install -r ./requirements.txt
+fi
+
+
+build_package() {
+   source ./env/bin/activate
+   cd ./python-package
+   python setup.py sdist
+   pip install ./dist/employee_events-0.0.tar.gz
+   cd ..
+}
+
+build_dashboard() {
+    source ./env/bin/activate
+    cd ./report
+    python dashboard.py 
+    cd ..
+}
+
+case "$1" in
+package)
+   build_package
+   ;;
+dashboard)
+   build_dashboard
+   ;;
+test)
+    pytest
+    ;;
+   *)
+   build_package
+   build_dashboard
+esac
+
+
+
+
+
