@@ -1,66 +1,41 @@
-# README Template
 
-Below is a template provided for use when building your README file for students.
+# Software Engineering for Data Scientists 
 
-# Project Title
+This repository contains starter code for the **Software Engineering for Data Scientists** final project. Please reference your course materials for documentation on this repository's structure and important files. Happy coding!
 
-Project description goes here.
-
-## Getting Started
-
-Instructions for how to get a copy of the project running on your local machine.
-
-### Dependencies
-
+### Repository Structure
 ```
-Examples here
-```
-
-### Installation
-
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
-
-[License](LICENSE.txt)
-
-# FastHtml User Dashboard
-
-### Run dashboard
-
-1. Navigate to the root of this project
-2. Run the following command in terminal
-
-```bash
-bash ./start.sh
+├── README.md
+├── assets
+│   ├── model.pkl
+│   └── report.css
+├── env
+├── python-package
+│   ├── employee_events
+│   │   ├── __init__.py
+│   │   ├── employee.py
+│   │   ├── employee_events.db
+│   │   ├── query_base.py
+│   │   ├── sql_execution.py
+│   │   └── team.py
+│   ├── requirements.txt
+│   ├── setup.py
+├── report
+│   ├── base_components
+│   │   ├── __init__.py
+│   │   ├── base_component.py
+│   │   ├── data_table.py
+│   │   ├── dropdown.py
+│   │   ├── matplotlib_viz.py
+│   │   └── radio.py
+│   ├── combined_components
+│   │   ├── __init__.py
+│   │   ├── combined_component.py
+│   │   └── form_group.py
+│   ├── dashboard.py
+│   └── utils.py
+├── requirements.txt
+├── start
+├── tests
+    └── test_employee_events.py
 ```
