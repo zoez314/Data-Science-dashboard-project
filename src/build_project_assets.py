@@ -119,14 +119,13 @@ for idx, e in enumerate(employee, start=1):
         _.append([idx, e['name'], note])
 
 notes = pd.DataFrame(_, columns=['employee_id', 'employee_name', 'note']).assign(
-            event_date=np.random.choice(df.event_date, replace=True)
+            event_date=np.random.choice(df.event_date, size=len(_), replace=True)
 )
-
 
 
 df = df.merge(notes[['employee_id', 'event_date', 'note']], on=['employee_id', 'event_date'], how='left').merge(notes[['employee_id', 'employee_name']].drop_duplicates(), on=['employee_id'])
 
-df = df.assign(shift=df.team_id.apply(lambda x: shifts[x-1]))
+df = df.assign(shift=df.team_id.apply(lambda x: shift[x-1]))
 
 team_map = {}
 for team in df.team_id.unique():
