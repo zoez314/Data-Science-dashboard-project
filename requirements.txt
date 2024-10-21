@@ -1,5 +1,4 @@
 scikit-learn==1.5.2
 python-fasthtml==0.4.1
-fh-matplotlib==0.0.4
 matplotlib==3.9.2
-# Add text to install the python-package here
+#### Add text to install the python-package here
