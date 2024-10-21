@@ -2,8 +2,9 @@ from fastcore.xml import FT
 from fasthtml.common import Div
 
 class CombinedComponent:
-    
 
+    outer_div_type = Div(cls='container')
+    
     def __call__(self, userid, model):
        
        called_children = self.call_children(userid, model)
@@ -28,7 +29,9 @@ class CombinedComponent:
     
     def outer_div(self, children, div_args):
 
-        return Div(
+        self.outer_div_type.children = ()
+
+        return self.outer_div_type(
             *children,
             **div_args
         )

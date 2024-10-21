@@ -1,4 +1,4 @@
-from fasthtml.common import FastHTML, H1, serve
+from fasthtml.common import *
 import matplotlib.pyplot as plt
 
 # Import QueryBase, Employee, Team from employee_events
@@ -20,8 +20,6 @@ from base_components import (
     )
 
 from combined_components import FormGroup, CombinedComponent
-
-
 
 
 # Create a subclass of base_components/dropdown
@@ -99,11 +97,17 @@ from combined_components import FormGroup, CombinedComponent
         #### YOUR CODE HERE
         
         # Initialize a pandas subplot
+        # and assign the figure and axis
+        # to variables
         #### YOUR CODE HERE
         
         # call the .plot method for the
         # cumulative counts dataframe
-        # pass the subplots ax to the .plot method
+        #### YOUR CODE HERE
+        
+        # pass the axis variable
+        # to the `.set_axis_styling`
+        # method
         #### YOUR CODE HERE
         
         # Set title and labels for x and y axis
@@ -156,6 +160,24 @@ from combined_components import FormGroup, CombinedComponent
         ax.barh([''], [pred])
         ax.set_xlim(0, 1)
         ax.set_title('Predicted Recruitment Risk', fontsize=20)
+        
+        # pass the axis variable
+        # to the `.set_axis_styling`
+        # method
+        #### YOUR CODE HERE
+ 
+# Create a subclass of combined_components/CombinedComponent
+# called Visualizations       
+#### YOUR CODE HERE
+
+    # Set the `children`
+    # class attribute to a list
+    # containing an initialized
+    # instance of `LineChart` and `BarChart`
+    #### YOUR CODE HERE
+
+    # Leave this line unchanged
+    outer_div_type = Div(cls='grid')
             
 # Create a subclass of base_components/DataTable
 # called `NotesTable`
@@ -195,8 +217,9 @@ class DashboardFilters(FormGroup):
 
     # Set the `children`
     # class attribute to a list
-    # containing all dashboard components
-    # in the order the should be displayed
+    # containing initialized instances 
+    # of the header, dashboard filters,
+    # data visualizations, and notes table
     #### YOUR CODE HERE
 
 # Initialize a fasthtml app 
@@ -206,11 +229,8 @@ class DashboardFilters(FormGroup):
 #### YOUR CODE HERE
 
 
-
-# Apply the app.get decorator
-# to a function called `index`
-# Set the route to the root
-# of the url path
+# Create a route for a get request
+# Set the route's path to the root
 #### YOUR CODE HERE
 
     # Call the initialized report
@@ -219,33 +239,38 @@ class DashboardFilters(FormGroup):
     # Return the result
     #### YOUR CODE HERE
 
-# Apply the app.get decorator
-# to a function called `_employee`
-# Set the route to /employee
-# and parameterize the employee id 
+# Create a route for a get request
+# Set the route's path to receive a request
+# for an employee ID so `/employee/2`
+# will return the page for the employee with
+# an ID of `2`. 
+# parameterize the employee ID 
+# to a string datatype
+#### YOUR CODE HERE
+
+    # Call the initialized report
+    # pass the ID and an instance
+    # of the Employee SQL class as arguments
+    # Return the result
+    #### YOUR CODE HERE
+
+# Create a route for a get request
+# Set the route's path to receive a request
+# for a team ID so `/team/2`
+# will return the page for the team with
+# an ID of `2`. 
+# parameterize the team ID 
 # to a string datatype
 #### YOUR CODE HERE
 
     # Call the initialized report
     # pass the id and an instance
-    # of the Employee class as arguments
-    # Return the result
-    #### YOUR CODE HERE
-
-# Apply the app.get decorator
-# to a function called `_team`
-# Set the route to /team
-# and parameterize the team id 
-# to a string datatype
-#### YOUR CODE HERE
-
-    # Call the initialized report
-    # pass the id and an instance
-    # of the Team class as arguments
+    # of the Team SQL class as arguments
     # Return the result
     #### YOUR CODE HERE
 
 
+# Keep the below code unchanged!
 @app.get('/update_dropdown{r}')
 def update_dropdown(r):
     dropdown = DashboardFilters.children[1]
