@@ -18,38 +18,6 @@ class QueryMixin:
     # as a pandas dataframe
     #### YOUR CODE HERE
 
-
-# Define a `pandas_query` decorator
-#### YOUR CODE HERE
-
-    # Use the `wraps` decorator
-    #### YOUR CODE HERE
-    # Define an inner function that receives
-    # all positional and keyword arguments
-    #### YOUR CODE HERE
-        
-        # Call the function passed to the decorator
-        # Pass all a positional and keyword arguments
-        # to the function
-        #### YOUR CODE HERE
-        
-        # Open an sqlite connection to `db_path`
-        #### YOUR CODE HERE
-        
-        # pass the output of the called function
-        # and the opened connection to
-        # the pandas `read_sql` function
-        #### YOUR CODE HERE
-        
-        # close the connection
-        #### YOUR CODE HERE
-        
-        # Return the output of `read_sql`
-        #### YOUR CODE HERE
-    
-    # Return the inner function
-    #### YOUR CODE HERE
-
  
  # Leave this code unchanged
 def query(func):
