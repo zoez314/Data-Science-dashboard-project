@@ -12,11 +12,19 @@ import pandas as pd
 # Define a class called `QueryMixin`
 class QueryMixin:
     
-    # Define a method named `run_query`
+    # Define a method named `pandas_query`
     # that receives an sql query as a string
-    # and returns the sql queries result
+    # and returns the query's result
     # as a pandas dataframe
     #### YOUR CODE HERE
+
+    # Define a method named `query`
+    # that receives an sql_query as a string
+    # and returns the query's result as
+    # a list of tuples. (You will need
+    # to use an sqlite3 cursor)
+    #### YOUR CODE HERE
+    
 
  
  # Leave this code unchanged
